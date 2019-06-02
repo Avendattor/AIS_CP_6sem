@@ -283,6 +283,56 @@ namespace Cinema
         }
 
         [Test]
+        public void test_6_Write_Review()
+        {
+            //Searching field to insert Query
+            IWebElement InputPassword = Browser.FindElement(By.Id("textGray"));
+            //filling field and sending Query
+            InputPassword.SendKeys("Геи" + OpenQA.Selenium.Keys.Enter);
+            //Finding element with Gays Film link
+            IWebElement LinkFilmGays = Browser.FindElement(By.PartialLinkText("Геи"));
+            //Clicking on element with Gays Film link
+            LinkFilmGays.Click();
+            //Finding element with OrderTickets button link 
+            IWebElement ButtonNewReview = Browser.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div[2]/a[2]"));
+            //Clicking on element with OrderTickets button link
+            ButtonNewReview.Click();
+            //Searching field to insert FIO
+            IWebElement FieldFIO = Browser.FindElement(By.Name("signature"));
+            //filling FIO field 
+            FieldFIO.SendKeys("Сибас Валентинович Валерьянов");
+            //Searching field to insert Email
+            IWebElement FieldEmail = Browser.FindElement(By.Name("email"));
+            //filling Email field 
+            FieldEmail.SendKeys("FilmReview@mail.com");
+            //Finding element with one star
+            IWebElement ButtonOneStar = Browser.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div[3]/form/div[3]/div[2]/label[5]"));
+            //Clicking on element with one star
+            ButtonOneStar.Click();
+            //Searching ExpTime > year radio button
+            IWebElement RadioButtonMoreThanOneYear = Browser.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div[3]/form/div[4]/div[2]/div[3]/label/input"));
+            //Clicking ExpTime > year radio button
+            RadioButtonMoreThanOneYear.Click();
+            //Searching field to insert Pros
+            IWebElement FieldPros = Browser.FindElement(By.Name("positive"));
+            //filling Pros field 
+            FieldPros.SendKeys("Нет");
+            //Searching field to insert Cons
+            IWebElement FieldCons = Browser.FindElement(By.Name("negative"));
+            //filling Cons field 
+            FieldCons.SendKeys("Тоже нет");
+            //Finding element with Comment link
+            IWebElement FieldComment = Browser.FindElement(By.Name("comment"));
+            //Clicking on element with Comment link
+            FieldComment.SendKeys("Да я и не смотрел этот фильм, в принципе, " + OpenQA.Selenium.Keys.Enter +
+                "он мне просто не нравится из-за названия.");
+            //Searching Send button
+            IWebElement ButtonAddReview = Browser.FindElement(By.Name("send"));
+            //Clicking Send button
+            //ButtonAddReview.Click();
+        }
+
+        [Test]
         public void test_LAST_Close()
         {
             //waiting 3 seconds 
