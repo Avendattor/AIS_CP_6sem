@@ -3,3 +3,5 @@ http://qaru.site 29.05.19
 https://sqa.stackexchange.com/ 29.05.19
 https://habr.com/ 30.05.19
 https://www.oodlestechnologies.com 30.05.19
+https://github.com 01.06.19
+http://askdev.info/ 01.06.19
