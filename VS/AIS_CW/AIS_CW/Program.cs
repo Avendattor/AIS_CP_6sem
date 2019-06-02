@@ -195,7 +195,92 @@ namespace Cinema
 
         }
 
-
+        [Test]
+        public void test_5_Order_Tickets()
+        {
+            //Finding element with Films link
+            IWebElement LinkFilms = Browser.FindElement(By.PartialLinkText("Фильмы"));
+            //Clicking on element with Films link
+            LinkFilms.Click();
+            //Finding element with Arthouse link
+            IWebElement LinkArthouse = Browser.FindElement(By.PartialLinkText("Артхаус"));
+            //Clicking on element with Arthouse link
+            LinkArthouse.Click();
+            //Finding element with BTBR to add to cart
+            IWebElement LinkBTBRToCart = Browser.FindElement(By.XPath ("/html/body/div[2]/div[2]/div[2]/div/div[3]/div/div[1]/div[2]/div[2]/div[2]/form/button"));
+            //Clicking on element with BTBR link - adding to cart
+            LinkBTBRToCart.Click();
+            //waiting for 2 seconds 
+            System.Threading.Thread.Sleep(2000);
+            //Finding element with Continue link
+            IWebElement LinkContinue = Browser.FindElement(By.Id("product_added_close"));
+            //Clicking on element with Continue link
+            LinkContinue.Click();
+            //waiting for 2 seconds 
+            System.Threading.Thread.Sleep(2000);
+            //Finding element with Gays Film link
+            IWebElement LinkFilmGays = Browser.FindElement(By.PartialLinkText("Геи"));
+            //Clicking on element with Gays Film link
+            LinkFilmGays.Click();
+            //Finding element with Gays to add to cart
+            IWebElement LinkGaysToCart = Browser.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div[1]/div[3]/div[2]/form/button"));
+            //Clicking on element with Gays link - adding to cart
+            LinkGaysToCart.Click();
+            //waiting for 2 seconds 
+            System.Threading.Thread.Sleep(2000);
+            //Finding element with Cart link
+            IWebElement LinkToCart = Browser.FindElement(By.PartialLinkText("Перейти в корзину"));
+            //Clicking on element to go to the Cart
+            LinkToCart.Click();
+            //Finding element with adding Gays tickets link
+            IWebElement ButtonAddGays = Browser.FindElement(By.XPath("//*[@id=\"cartEdit\"]/div[1]/table/tbody/tr[3]/td[3]/a[2]"));
+            //Clicking on element with adding Gays tickets link
+            ButtonAddGays.Click();
+            //Clicking on element with adding Gays tickets link
+            ButtonAddGays.Click();
+            //Clicking on element with adding Gays tickets link
+            ButtonAddGays.Click();
+            //Clicking on element with adding Gays tickets link
+            ButtonAddGays.Click();
+            //waiting for 2 seconds 
+            System.Threading.Thread.Sleep(5000);
+            //Finding element with OrderTickets link
+            IWebElement ButtonOrderTickets = Browser.FindElement(By.PartialLinkText("Оформить заказ"));
+            //Clicking on element with OrderTickets link
+            ButtonOrderTickets.Click();
+            //Searching field to insert FIO
+            IWebElement FieldFIO = Browser.FindElement(By.Name("form_data[1]"));
+            //filling FIO field 
+            FieldFIO.SendKeys("Zubenko Mihail Petrovich");
+            //Searching field to insert Phone
+            IWebElement FieldPhone = Browser.FindElement(By.Name("form_data[3]"));
+            //filling Phone field 
+            FieldPhone.SendKeys("88005553535");
+            //Searching field to insert email
+            IWebElement FieldEmail = Browser.FindElement(By.Name("form_data[4]"));
+            //filling email field 
+            FieldEmail.SendKeys("tickets_order@mail.com");
+            //Finding element with Cash RadioButton
+            IWebElement RadioButtonCash = Browser.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div[4]/form/div/div[4]/div[2]/label/input"));
+            //Clicking on element with Cash RadioButton
+            RadioButtonCash.Click();
+            //Finding element with Delivery RadioButton
+            IWebElement RadioButtonDelivery = Browser.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div[4]/form/div/div[5]/div[2]/label/input"));
+            //Clicking on element with Delivery RadioButton
+            RadioButtonDelivery.Click();
+            //Searching field to insert Address
+            IWebElement Address = Browser.FindElement(By.Name("form_data[8]"));
+            //filling Address field 
+            Address.SendKeys("г. Петрозаводск, ул. Зайцева, 32");
+            //Searching field to insert TicketOrderComment
+            IWebElement TicketOrderComment = Browser.FindElement(By.Name("form_data[9]"));
+            //filling TicketOrderComment field 
+            TicketOrderComment.SendKeys("Побыстрее, пожалуйста");
+            //Searching Send button
+            IWebElement ButtonSend = Browser.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div[4]/form/button"));
+            //Clicking Send button
+            //ButtonSend.Click();
+        }
 
         [Test]
         public void test_LAST_Close()
