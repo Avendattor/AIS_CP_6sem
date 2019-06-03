@@ -293,9 +293,9 @@ namespace Cinema
             IWebElement LinkFilmGays = Browser.FindElement(By.PartialLinkText("Геи"));
             //Clicking on element with Gays Film link
             LinkFilmGays.Click();
-            //Finding element with OrderTickets button link 
+            //Finding element with ButtonNewReview button link 
             IWebElement ButtonNewReview = Browser.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div/div[2]/div[2]/a[2]"));
-            //Clicking on element with OrderTickets button link
+            //Clicking on element with ButtonNewReview button link
             ButtonNewReview.Click();
             //Searching field to insert FIO
             IWebElement FieldFIO = Browser.FindElement(By.Name("signature"));
