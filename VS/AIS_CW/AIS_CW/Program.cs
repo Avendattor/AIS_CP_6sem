@@ -122,7 +122,7 @@ namespace Cinema
             //Searching Submit button
             IWebElement Submit = Browser.FindElement(By.Name("btn-send"));
             //Clicking Submit button
-            //Submit.Click();
+            Submit.Click();
         }
 
         [Test]
@@ -161,7 +161,7 @@ namespace Cinema
             //Searching Submit button
             IWebElement Submit = Browser.FindElement(By.Name("btn-send"));
             //Clicking Submit button
-            //Submit.Click();
+            Submit.Click();
 
         }
 
@@ -194,7 +194,7 @@ namespace Cinema
             //Searching Send button
             IWebElement Send = Browser.FindElement(By.Name("btn-send"));
             //Clicking Send button
-            //Send.Click();
+            Send.Click();
 
         }
 
@@ -283,7 +283,7 @@ namespace Cinema
             //Searching Send button
             IWebElement ButtonSend = Browser.FindElement(By.XPath("/html/body/div[2]/div[2]/div[2]/div/div[4]/form/button"));
             //Clicking Send button
-            //ButtonSend.Click();
+            ButtonSend.Click();
         }
 
         [Test]
@@ -334,7 +334,7 @@ namespace Cinema
             //Searching Send button
             IWebElement ButtonAddReview = Browser.FindElement(By.Name("send"));
             //Clicking Send button
-            //ButtonAddReview.Click();
+            ButtonAddReview.Click();
         }
 
         [TearDown]
