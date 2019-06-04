@@ -8,12 +8,10 @@ namespace Cinema
     class Autotest_Main
     {
         IWebDriver Browser;
-        static void Main(string[] args)
-        {
-        }
+ 
 
-        [Test]
-        public void test_0_Password()
+        [SetUp]
+        public void test_Initial_Password()
         {
             //declaring variable Browser
             Browser = new OpenQA.Selenium.Chrome.ChromeDriver();
@@ -332,7 +330,7 @@ namespace Cinema
             //ButtonAddReview.Click();
         }
 
-        [Test]
+        [TearDown]
         public void test_LAST_Close()
         {
             //waiting 3 seconds 
