@@ -16,3 +16,4 @@ C:\PaulP\GitHub\AIS_CW\VS\AIS_CW\AIS_CW\obj\Debug\AIS_CW.pdb
 C:\PaulP\GitHub\AIS_CW\VS\AIS_CW\AIS_CW\bin\Debug\AIS_CW.dll.config
 C:\PaulP\GitHub\AIS_CW\VS\AIS_CW\AIS_CW\bin\Debug\AIS_CW.dll
 C:\PaulP\GitHub\AIS_CW\VS\AIS_CW\AIS_CW\obj\Debug\AIS_CW.dll
+C:\PaulP\GitHub\AIS_CW\VS\AIS_CW\AIS_CW\obj\Debug\AIS_CW.csprojAssemblyReference.cache

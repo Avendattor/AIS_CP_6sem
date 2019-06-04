@@ -11,6 +11,7 @@ namespace Cinema
  
 
         [SetUp]
+        // Test-case №1.10
         public void test_Initial_Password()
         {
             //declaring variable Browser
@@ -32,6 +33,7 @@ namespace Cinema
         }
 
         [Test]
+        // Test-case №1.1
         public void test_1_Switching_Pages()
         {
             
@@ -72,6 +74,7 @@ namespace Cinema
         }
 
         [Test]
+        // Test-case №1.3
         public void test_2_Make_Order()
         {
             //Finding element with Order link
@@ -123,6 +126,7 @@ namespace Cinema
         }
 
         [Test]
+        // Test-case №1.5
         public void test_3_Write_Feedback()
         {
             //Finding element with About link
@@ -162,6 +166,7 @@ namespace Cinema
         }
 
         [Test]
+        // Test-case №1.6
         public void test_4_Ask_Question()
         {
             //Finding element with Contacts link
@@ -194,6 +199,7 @@ namespace Cinema
         }
 
         [Test]
+        // Test-case №1.9
         public void test_5_Order_Tickets()
         {
             //Finding element with Films link
@@ -281,6 +287,7 @@ namespace Cinema
         }
 
         [Test]
+        // Test-case №1.8
         public void test_6_Write_Review()
         {
             //Searching field to insert Query
